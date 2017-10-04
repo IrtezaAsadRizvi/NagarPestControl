@@ -1,0 +1,66 @@
+<div id="single-service-page" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <center>
+    <div class="service-pic animated bounceIn" style="width:100px; margin: 0 auto;">
+      <img src="images/mosquito-512.png" alt="">
+    </div>
+    <h2 ng-if="selectedLang == 0" class="animated bounceInUp">Mosquito Control Services</h2>
+    <h2 ng-if="selectedLang == 1" class="animated bounceInUp">মশা দমন</h2>
+    <div id="title-line" class="animated bounceInUp"></div>
+    <div class="container animated bounceInUp" id="single-service-page-intro">
+      <p ng-if="selectedLang == 0">Mosquito are very sneaky and very dangerours. Malaria, Dengue, Yellow Fever, and recently Chikungunya and Zika are all highly deadly diseases. What you may not have known, is that all are carried by mosquitoes. So don’t tolerate a mosquito infestation.</p>
+      <p ng-if="selectedLang == 1">মশা খুব চটকদার এবং খুব বিপজ্জনক। ম্যালেরিয়া, ডেঙ্গু, হলুদ জ্বর, এবং সম্প্রতি চিকুনগুনিয়া এবং জিকা সবই মারাত্মক মারাত্মক রোগ যা মশা থেকে ছড়ায়। সুতরাং মশার প্রাদুর্ভাব সহ্য করা উচিত না।</p>
+    </div>
+    <div id="single-service-page-mosquito"></div>
+    <div class="container" id="single-service-page-details">
+      <div class="row">
+        <div class="col-md-4" id="can-spread">
+          <h4 ng-if="selectedLang == 0">MOSQUITO CAN SPREAD</h4>
+          <h4 ng-if="selectedLang == 1">মশা প্রেড করতে পারে</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> Malaria<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Dengue<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Cholera<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Chikungunya<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Yellow Fever<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Zika<br><br>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> ম্যালেরিয়া<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> ডেঙ্গু<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> কলেরা<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> চিকুনগুনিয়া<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> হলুদ জ্বর<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> জিকা<br><br>
+        </div>
+        <div class="col-md-8" id="our-method">
+          <h4 ng-if="selectedLang == 0">OUR METHODS</h4>
+          <h4 ng-if="selectedLang == 1">আমাদের পদ্ধতি</h4>
+          <p ng-if="selectedLang == 0">Mosquitoes are frequently in the news because they are both a nuisance and a health threat. It is important to reduce mosquito populations around your home and other living and recreational areas. Mosquito Control is accomplished by peforming the following:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Insecticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Insecticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Fogger Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Mini Fogger Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Drains and Ponds Cleaning and Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Fumigation</span>
+          </p>
+          <p ng-if="selectedLang == 1">মশারা প্রায়ই খবরে এসে থাকে কারণ তারা উপদ্রব এবং স্বাস্থ্যগত হুমকি। আপনার বাড়িতে এবং অন্যান্য সজীব এবং বিনোদনমূলক এলাকায় মশার সংখ্যা কমে যাওয়া গুরুত্বপূর্ণ। মশা নিয়ন্ত্রণ নিম্নলিখিত পদ্ধতি দ্বারা সম্পন্ন হয়:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Insecticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Insecticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Fogger Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Mini Fogger Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Drains and Ponds Cleaning and Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Fumigation</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div id="questions" class="service-offer">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  TAKE OUR SERVICE? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

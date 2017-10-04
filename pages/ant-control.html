@@ -1,0 +1,51 @@
+<div id="single-service-page" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  <center>
+    <div class="service-pic animated bounceIn" style="width:100px; margin: 0 auto;">
+      <img src="images/ant-512.png" alt="">
+    </div>
+    <h2 ng-if="selectedLang == 0" class="animated bounceInUp">Ant Control Services</h2>
+    <h2 ng-if="selectedLang == 1" class="animated bounceInUp">পিঁপড়া দমন</h2>
+    <div id="title-line" class="animated bounceInUp"></div>
+    <div class="container animated bounceInUp" id="single-service-page-intro">
+      <p ng-if="selectedLang == 0">The ants found in civilised area are generally not dangerous. Ants are a social insect that lives in colonies. Treatment plans should include killing the entire colony. Just spraying an ant with a typical ant spray, particularly a repellent spray will only kill a few at best.</p>
+      <p ng-if="selectedLang == 1">সভ্য এলাকায় পাওয়া পিঁপরা সাধারণত বিপজ্জনক নয়। পিঁপড়া একটি সামাজিক পোকা যা বসতি করে বসবাস করে। দমন করতে হলে পুরো বসতি ই ধ্বংস করে ফেলা উচিত। স্প্রে শুধুমাত্র গূটি কয়েক হত্যা করবে ।</p>
+    </div>
+    <div id="single-service-page-ants"></div>
+    <div class="container" id="single-service-page-details">
+      <div class="row">
+        <div class="col-md-4" id="can-spread">
+          <h4 ng-if="selectedLang == 0">ANT CAN SPREAD</h4>
+          <h4 ng-if="selectedLang == 1">পিঁপড়া প্রেড করতে পারে</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px"> Ants are part of a healthy ecology on the earth. They may carry bacteria but harmless to humans. <br><br>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px"> পিঁপড়া পৃথিবীর একটি সুস্থ পরিবেশের অংশ তারা ব্যাকটেরিয়া বহন করতে পারে কিন্তু মানুষের কাছে বিপজ্জনক নয়।<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> চাগাস রোগ<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> চুলকানি<br><br>
+        </div>
+        <div class="col-md-8" id="our-method">
+          <h4 ng-if="selectedLang == 0">OUR METHODS</h4>
+          <h4 ng-if="selectedLang == 1">আমাদের পদ্ধতি</h4>
+          <p ng-if="selectedLang == 0">There are two main types of ant problems that are commonly encountered with an ant problem, ants that live outside and forage inside and ants that already have a nest built inside. Our methods are sufficient for both:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Root destuction<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Area cleansing<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+          </p>
+          <p ng-if="selectedLang == 1">পিঁপড়া সমস্যায় দুই প্রধান ধরনের সমস্যা দেখা দেয় যা সাধারণত, যে পিঁপড়াগুলো বাইরে থাকে এবং ভিতরের কাঁটাগাছ এবং যেগুলো ভেতরে বাসা বানিয়ে ফেলেছে। আমাদের পদ্ধতি উভয়ের জন্যই যথেষ্ট :<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Root destuction<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Area cleansing<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div id="questions" class="service-offer">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  TAKE OUR SERVICE? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

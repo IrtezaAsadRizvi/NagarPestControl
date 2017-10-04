@@ -1,0 +1,54 @@
+<div id="single-service-page" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <center>
+    <div class="service-pic animated bounceIn" style="width:100px; margin: 0 auto;">
+      <img src="images/insecticide-Glyph-06-512.png" alt="">
+    </div>
+    <h2 ng-if="selectedLang == 0" class="animated bounceInUp">Bed Bugs Control Services</h2>
+    <h2 ng-if="selectedLang == 1" class="animated bounceInUp">ছারপোকা দমন</h2>
+    <div id="title-line" class="animated bounceInUp"></div>
+    <div class="container animated bounceInUp" id="single-service-page-intro">
+      <p ng-if="selectedLang == 0">Bed bugs are parasitic insects of the cimicid family that feed exclusively on blood. Cimex lectularius, the common bed bug, is the best known as it prefers to feed on human blood.</p>
+      <p ng-if="selectedLang == 1">ছারপোকা সিমিসিড পরিবারের পরজীবী কীটপতঙ্গ যারা রক্তের উপর বেচে থাকে। সিমেক্স লেকটুলিয়াস, সাধারণ ছারপোকা, এটি মানুষের রক্ত খাদক হিসাবে পরিচিত়।</p>
+    </div>
+    <div id="single-service-page-bed-bugs"></div>
+    <div class="container" id="single-service-page-details">
+      <div class="row">
+        <div class="col-md-4" id="can-spread">
+          <h4 ng-if="selectedLang == 0">BED BUGS CAN SPREAD</h4>
+          <h4 ng-if="selectedLang == 1">ছারপোকা প্রেড করতে পারে</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> Trypanosoma cruzi<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Chagas disease<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Itching <br><br>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> ট্রাইপ্যানোসোমা ক্রুজি<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> চাগাস রোগ<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> চুলকানি<br><br>
+        </div>
+        <div class="col-md-8" id="our-method">
+          <h4 ng-if="selectedLang == 0">OUR METHODS</h4>
+          <h4 ng-if="selectedLang == 1">আমাদের পদ্ধতি</h4>
+          <p ng-if="selectedLang == 0">We survey and analyse the infested body or area very carefully before deciding on any treatment.Then we calculate the most appropriate methods with our team of experts and entomologists. Then we’ll execute the service with our highly effective pest-control techniques. Some of our methods include:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+          </p>
+          <p ng-if="selectedLang == 1">কোনও চিকিত্সার সিদ্ধান্ত নেওয়ার আগে আমরা অত্যন্ত সাবধানে আক্রান্ত​ শরীর বা এলাকাকে বিশ্লেষণ করি। তারপর আমরা আমাদের বিশেষজ্ঞ এবং কীটনাশকের সাথে সবচেয়ে উপযুক্ত পদ্ধতিগুলির হিসাব করি। তারপর আমরা কৌশল এবং নিয়ন্ত্রণের সঙ্গে সেবা চালন করি। আমাদের কিছু পদ্ধতি হোল :<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div id="questions" class="service-offer">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  TAKE OUR SERVICE? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

@@ -1,0 +1,276 @@
+<div ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  <!-- HERO SECTION -->
+  <div id="hero">
+    <div class="container">
+      <div id="hero-content" class="row">
+        <h1 ng-if="selectedLang == 0" class="animated zoomIn">No.1 Pest Control Service</h1>
+        <h1 ng-if="selectedLang == 1" class="animated zoomIn">১ নম্বর পেস্ট দমন সংস্থা</h1>
+        <h1 ng-if="selectedLang == 0" id="hero-text" class="animated bounceInUp">We are the experts in pest solution <br>
+          <span><i class="fa fa-phone" aria-hidden="true"></i> 01682222222, 01682222222</span></h1>
+        <h1 ng-if="selectedLang == 1" id="hero-text" class="animated bounceInUp">আমরা পেস্ট দমনে অভিজ্ঞ <br>
+          <span><i class="fa fa-phone" aria-hidden="true"></i> 01682222222, 01682222222</span></h1>
+        <button ng-if="selectedLang == 0" class="btn-general animated bounceInUp" ng-click="link('contact')">Contact Us</button>
+        <button ng-if="selectedLang == 1" class="btn-general animated bounceInUp" ng-click="link('contact')">যোগাযোগ করুন</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- home-services-section -->
+  <div id="home-services-section" class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="home-info">
+
+            <h1 ng-if="selectedLang == 0" >Bangladesh Govt. Certified</h1>
+            <h1 ng-if="selectedLang == 1" >বাংলাদেশ সরকার অনুমোদিত </h1>
+            <div id="title-line"></div>
+            <p ng-if="selectedLang == 0" >Since 1990 we have been serving insect repellent with very good reputation in Bangladesh.
+              We use environmentally friendly, advanced chemicals that we use to control insects. From England, China, Germany
+              and India We have a team of experienced technicians and pest control specialist. We will solve any problems related
+              to insects by guaranteeing that we are all over Bangladesh Anywhere in any home, office, hospital, restaurant, good
+              day, warehouse, residential hotel etc.With 100% guarantee, suppression of all types of insecticides, such as dusk,
+              cockroach, vermicelli, tamarind and fly.</p>
+            <p ng-if="selectedLang == 1" >১৯৯০ সাল থেকে আমরা বাংলাদেশে অত্যন্ত সুনামের সাথে পোকা-মাকর দমনের সেবা দিয়ে আসছি।
+              পোকামাকড় দমনে আমরা ব্যাবহার করি পরিবেশ বান্ধব উন্নতমানের কেমিক্যাল যা আমরা আমদানি করি
+               ইংল্যান্ড, চিন, জার্মান ও ভারত থেকে। আমাদের রয়েছে অভিজ্ঞ একদল টেকনিশিয়ান ও pest control specialist.
+                পোকামাকড় সংক্রান্ত আপনার যে কোন সমস্যা আমরা গ্যারান্টি দিয়ে সমাধান করে দিব ।আমরা সারা বাংলাদেশের যে
+                কোন জায়গায় যে কোন বাড়ি, অফিস, হাসপাতাল, রেস্টুরেন্ট, গুডাউন, ওয়্যার হাউজ, আবাসিক হোটেল ইত্যাদিতে
+                ১০০% গ্যারান্টি সহকারে ছাড়পোকা, তেলাপোকা, উইপোকা, ইদুর ও মাছি সহ সকল প্রকার পোকামাকর দমন করি।</p>
+
+        </div>
+        </div>
+
+        <div class="col-md-6" id="home-services-info">
+          <div class="row" id="small-rows">
+            <div class="col-md-5 col-sm-5 col-xm-5 img-holder">
+              <img src="images/services3.jpg" alt="">
+            </div>
+            <div class="col-md-7 col-sm-7 col-xm-7">
+              <h4 ng-if="selectedLang == 0">RESIDENTIAL PEST CONTROL</h4>
+              <h4 ng-if="selectedLang == 1">বাসায় গিয়ে দমন</h4>
+              <p class="small-p" ng-if="selectedLang == 0" >We do home services in a very short notice.</p>
+              <p class="small-p" ng-if="selectedLang == 1" >আমরা খুব সংক্ষিপ্ত নোটিশে বাসায় গিয়ে কীটপতঙ্গ দমন করি</p>
+              <a ng-if="selectedLang == 0" class="read-more-link" href="#">Read More</a>
+              <a ng-if="selectedLang == 1" class="read-more-link" href="#">আরো জানুন</a>
+            </div>
+          </div>
+          <div class="row" id="small-rows">
+            <div class="col-md-5 col-sm-5 col-xm-5 img-holder">
+              <img src="images/services1.jpg" alt="">
+            </div>
+            <div class="col-md-7 col-sm-7 col-xm-7">
+              <h4 ng-if="selectedLang == 0">COMMERCIAL PEST CONTROL</h4>
+              <h4 ng-if="selectedLang == 1">বাণিজ্যিক অফিসে দমন</h4>
+              <p class="small-p" ng-if="selectedLang == 0" >We do home services in a very short notice.</p>
+              <p class="small-p" ng-if="selectedLang == 1" >আমরা খুব সংক্ষিপ্ত নোটিশে বাসায় গিয়ে কীটপতঙ্গ দমন করি</p>
+              <a ng-if="selectedLang == 0" class="read-more-link" href="#">Read More</a>
+              <a ng-if="selectedLang == 1" class="read-more-link" href="#">আরো জানুন</a>
+            </div>
+          </div>
+          <div class="row" id="small-rows">
+            <div class="col-md-5 col-sm-5 col-xm-5 img-holder">
+              <img src="images/services2.jpg" alt="">
+            </div>
+            <div class="col-md-7 col-sm-7 col-xm-7">
+              <h4 ng-if="selectedLang == 0">PEST PREVENTION</h4>
+              <h4 ng-if="selectedLang == 1">কীটপতঙ্গ প্রতিরোধ</h4>
+              <p class="small-p" ng-if="selectedLang == 0" >We do home services in a very short notice.</p>
+              <p class="small-p" ng-if="selectedLang == 1" >আমরা খুব সংক্ষিপ্ত নোটিশে বাসায় গিয়ে কীটপতঙ্গ দমন করি</p>
+              <a ng-if="selectedLang == 0" class="read-more-link" href="#">Read More</a>
+              <a ng-if="selectedLang == 1" class="read-more-link" href="#">আরো জানুন</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of home-services-section -->
+    <!-- why call? -->
+    <div id="why-call">
+      <div class="container">
+        <center>
+          <h1 ng-if="selectedLang == 0" >WHY CALL US?</h1>
+          <h1 ng-if="selectedLang == 1" >আমাদের কেন ডাকবেন?</h1>
+          <div id="title-line-w"></div>
+          <p ng-if="selectedLang == 0" >We expert in parasite, bug removal. Our eco-freindly pest coontrol mechanism will
+          guarantee you a pest free environment. We'll take care of all the pest problems for you. We control Cockroaches,
+        Mosquitos, Termites, Bed bugs, Rats, Ants and Fumigation.</p>
+          <p ng-if="selectedLang == 1" >আমরা প্যারাসাইট, বাগ অপসারণ বিশেষজ্ঞ। আমাদের ইকো-ফ্রেন্ডলি কীটপতঙ্গ কনট্রোলোল মেকানিজম
+          আপনাকে এনে দিবে কীটপতঙ্গহীন পরিবেশ। আমরা তেলাপোকা, মশা, উই পোকা, ছারপোকা, ইঁদুর, পিঁপড়া দমন করে থাকি।</p>
+        </center>
+        <div class="row" style="text-align:center">
+          <div class="why-call-insects">
+            <img src="images/ant-512.png" alt="">
+            <h4 ng-if="selectedLang == 0" >ANT</h4>
+            <h4 ng-if="selectedLang == 1" >পিঁপড়া</h4>
+          </div>
+          <div class="why-call-insects">
+            <img src="images/termites.png" alt="">
+            <h4 ng-if="selectedLang == 0" >TERMITES</h4>
+            <h4 ng-if="selectedLang == 1" >উইপোকা</h4>
+          </div>
+          <div class="why-call-insects">
+            <img src="images/cockroach-512.png" alt="">
+            <h4 ng-if="selectedLang == 0" >COCKROACH</h4>
+            <h4 ng-if="selectedLang == 1" >তেলাপোকা</h4>
+          </div>
+          <div class="why-call-insects">
+            <img src="images/insecticide-Glyph-06-512.png" alt="">
+            <h4 ng-if="selectedLang == 0" >BED BUGS</h4>
+            <h4 ng-if="selectedLang == 1" >ছারপোকা</h4>
+          </div>
+          <div class="why-call-insects">
+            <img src="images/mosquito-512.png" alt="">
+            <h4 ng-if="selectedLang == 0" >MOSQUITO</h4>
+            <h4 ng-if="selectedLang == 1" >মশা</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of why call? -->
+    <!-- our services -->
+    <div id="home-our-services">
+      <div class="container">
+        <div class="row">
+          <div id="home-our-services-img" class="col-md-5">
+            <img src="images/servicer.png" alt="">
+          </div>
+          <div class="col-md-7" style="padding:30px 0px">
+            <h1 ng-if="selectedLang == 0" >OUR SERVICES</h1>
+            <h1 ng-if="selectedLang == 1" >আমাদের সেবা</h1>
+            <div id="title-line"></div>
+            <div class="row">
+              <div class="col-md-4" class="our-servies">
+                <div class="service-pic">
+                  <img src="images/cockroach-512.png" alt="">
+                </div>
+                <h4 ng-if="selectedLang == 0">Cockroach Control</h4>
+                <h4 ng-if="selectedLang == 1">তেলাপোকা দমন</h4>
+                <p ng-if="selectedLang == 0">Cockroach is the common pest of our
+                  living. We can see cockroaches in every place like house, office, hotel etc.</p>
+                <p ng-if="selectedLang == 1">তেলাপোকা আমাদের ঘরের সবচেয়ে সাধারণ কীট। আমাদের
+                  ঘর, অফিস, হোটেলে তাদের দেখা যায়।</p>
+                <a ng-if="selectedLang == 0" class="read-more-link" ng-click="link('cockroach-control')">Read More</a>
+                <a ng-if="selectedLang == 1" class="read-more-link" ng-click="link('cockroach-control')">আরো জানুন</a>
+              </div>
+
+              <div class="col-md-4" class="our-servies">
+                <div class="service-pic">
+                  <img src="images/rodent.png" alt="">
+                </div>
+                <h4 ng-if="selectedLang == 0">Rodent Pest Control</h4>
+                <h4 ng-if="selectedLang == 1">ইঁদুর দমন</h4>
+                <p ng-if="selectedLang == 0">Rodents are mammals of the order Rodentia, They lives making small holes in our homes.</p>
+                <p ng-if="selectedLang == 1">ইঁদুর রডেনটিয়া গোত্রের স্তন্যপায়ী একটি প্রাণী গোত্রের। তারা আমাদের বাড়িতে ছোট গর্ত তৈরি করে থাকে।</p>
+                <a ng-if="selectedLang == 0" class="read-more-link" ng-click="link('rodent-control')">Read More</a>
+                <a ng-if="selectedLang == 1" class="read-more-link" ng-click="link('rodent-control')">আরো জানুন</a>
+              </div>
+
+              <div class="col-md-4" class="our-servies">
+                <div class="service-pic">
+                  <img src="images/termites.png" alt="">
+                </div>
+                <h4 ng-if="selectedLang == 0">Termite Control</h4>
+                <h4 ng-if="selectedLang == 1">উইপোকা দমন</h4>
+                <p ng-if="selectedLang == 0">Termites are found in our wooden furnitures. They eat off the wood from within.</p>
+                <p ng-if="selectedLang == 1">উইপোকা আমাদের কাঠের আসবাবপত্রে পাওয়া যায় । তারা কাঠ ভেতর থেকে খেয়ে ফেলে।</p>
+                <a ng-if="selectedLang == 0" class="read-more-link" ng-click="link('termite-control')">Read More</a>
+                <a ng-if="selectedLang == 1" class="read-more-link" ng-click="link('termite-control')">আরো জানুন</a>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4" class="our-servies">
+                <div class="service-pic">
+                  <img src="images/mosquito-512.png" alt="">
+                </div>
+                <h4 ng-if="selectedLang == 0">Mosquitoes Control</h4>
+                <h4 ng-if="selectedLang == 1">মশা দমন</h4>
+                <p ng-if="selectedLang == 0">Over 2500 different kinds of mosquitoes ubique the world.
+                  They stays in the conrens of our houses.</p>
+                <p ng-if="selectedLang == 1">বিশ্বের ২৫০০ বিভিন্ন ধরনের মশা সারা পৃথিবী জুড়ে। আমাদের বাসার আনাচে কানাচে তাদের দেখা যায়।</p>
+                <a ng-if="selectedLang == 0" class="read-more-link" ng-click="link('mosquito-control')">Read More</a>
+                <a ng-if="selectedLang == 1" class="read-more-link" ng-click="link('mosquito-control')">আরো জানুন</a>
+              </div>
+
+              <div class="col-md-4" class="our-servies">
+                <div class="service-pic">
+                  <img src="images/insecticide-Glyph-06-512.png" alt="">
+                </div>
+                <h4 ng-if="selectedLang == 0">Bedbugs Control</h4>
+                <h4 ng-if="selectedLang == 1">ছারপোকা দমন</h4>
+                <p ng-if="selectedLang == 0">Bedbug is small and flattened elliptical (Oval) shaped insect, They will hide in suitcases, boxes and shoes to be near a food supply.</p>
+                <p ng-if="selectedLang == 1">বেডবুগ ক্ষুদ্র ও আংশিক বৃত্তাকার (ওভাল) আকৃতির পোকা। তারা একটি খাদ্য সরবরাহ কাছাকাছি হতে স্যুটকেস, বক্স এবং জুতা মধ্যে লুকান হবে।</p>
+                <a ng-if="selectedLang == 0" class="read-more-link" ng-click="link('bed-bugs-control')">Read More</a>
+                <a ng-if="selectedLang == 1" class="read-more-link" ng-click="link('bed-bugs-control')">আরো জানুন</a>
+              </div>
+
+              <div class="col-md-4" class="our-servies">
+                <div class="service-pic">
+                  <img src="images/fumigation.png" alt="">
+                </div>
+                <h4 ng-if="selectedLang == 0">Fumigation Services</h4>
+                <h4 ng-if="selectedLang == 1">উপধূপন সেবা</h4>
+                <p ng-if="selectedLang == 0">Our Fumigation service is unique and well known. we treat critters safely and efficiently</p>
+                <p ng-if="selectedLang == 1">আমাদের উপধূপন সেবা অনন্য এবং সুপরিচিত। আমরা কীট নিরাপদে এবং দক্ষতার সাথে দমন করি।</p>
+                <a ng-if="selectedLang == 0" class="read-more-link" ng-click="link('fumigation-service')">Read More</a>
+                <a ng-if="selectedLang == 1" class="read-more-link" ng-click="link('fumigation-service')">আরো জানুন</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of our services -->
+    <!-- clients -->
+    <div id="home-clients" class="container">
+      <center>
+        <h1 ng-if="selectedLang == 0" >OUR CLIENTS</h1>
+        <h1 ng-if="selectedLang == 1" >আমাদের ক্লায়েন্ট</h1>
+        <div id="title-line"></div>
+      </center>
+      <div class="row" style="text-align:center;">
+        <div class="clients why-call-insects">
+          <img src="images/clients/brothers-furniture.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/bsrm.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/chittagong-stock.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/eastern-bank.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/epyllion.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/Plummy-Fashion.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/partex.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/icrc.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/dmp.jpg" alt="">
+        </div>
+        <div class="clients why-call-insects">
+          <img src="images/clients/BMA.jpg" alt="">
+        </div>
+      </div>
+    </div>
+    <!-- end of clients -->
+    <!-- any questions -->
+    <div id="questions">
+      <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  HAVE ANY QUESTIONS ABOUT PEST? CALL US <span>01682222222,01682222222</span></p>
+      <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? কল করুন <span>01682222222,01682222222</span></p>
+    </div>
+  </div>

@@ -1,0 +1,74 @@
+<div id="single-service-page" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <center>
+    <div class="service-pic animated bounceIn" style="width:100px; margin: 0 auto;">
+      <img src="images/rodent.png" alt="">
+    </div>
+    <h2 ng-if="selectedLang == 0" class="animated bounceInUp">Rodent Control Services</h2>
+    <h2 ng-if="selectedLang == 1" class="animated bounceInUp">ইঁদুর দমন</h2>
+    <div id="title-line" class="animated bounceInUp"></div>
+    <div class="container animated bounceInUp" id="single-service-page-intro">
+      <p ng-if="selectedLang == 0">Rat and mice are two extremely common rodents. A pest control
+        professional should be contacted for assistance in this case.
+        Rats and mice are both extremely destructive within agricultural communities. A number of
+        species feed on seeds and grains. The feces and urine of some rodents may contaminate
+        surfaces with which they come into contact. </p>
+      <p ng-if="selectedLang == 1">ইঁদুর এবং মাউস দুটি অত্যন্ত সাধারণ রডেন্টস। একজন কীটপতঙ্গ নিয়ন্ত্রণ
+        পেশাদার এই ক্ষেত্রে সাহায্যের জন্য যোগাযোগ করা উচিত। কৃষি সম্প্রদায়গুলির মধ্যে ইঁদুর এবং মাউস
+        উভয়ই অত্যন্ত ধ্বংসাত্মক। কিছু সংখ্য প্রজাতি বীজ এবং শস্য খেয়ে ফেলে। এদের মূত্র এবং প্রস্রাব বাসা বাড়ি দূষিত করে।</p>
+    </div>
+    <div id="single-service-page-rodent"></div>
+    <div class="container" id="single-service-page-details">
+      <div class="row">
+        <div class="col-md-4" id="can-spread">
+          <h4 ng-if="selectedLang == 0">RODENT CAN SPREAD</h4>
+          <h4 ng-if="selectedLang == 1">ইঁদুর প্রেড করতে পারে</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> Hantavirus Pulmonary Syndrome<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Leptospirosis<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Rat-bite Fever<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Salmonellosis<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Plague<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Cutaneous Leishmaniasis.</p>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> হান্তাভিরাস পালমোনারি সিন্ড্রোম<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> লেপটোসপাইরোসিস<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> ইঁদুর জ্বর<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> ষাল্মনেল্লসিস্<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> প্লেগ<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> কাটিয়েটিক লেইশম্যানিয়াসিস</p>
+        </div>
+        <div class="col-md-8" id="our-method">
+          <h4 ng-if="selectedLang == 0">OUR METHODS</h4>
+          <h4 ng-if="selectedLang == 1">আমাদের পদ্ধতি</h4>
+          <p ng-if="selectedLang == 0">Our Rodent Control extremely is extremely well-trained and experienced rodent control technicians to
+            ensure the best quality treatment and 100% client satisfaction. we don't compromise on matters of
+            client satisfaction and quality. Our methods are international and modern. These methods include:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Rodent Glue Trap (100% Poison Free)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Zinc Phosphide Treatment (Poison)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Rodent Metal Trap (100% Poison Free)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Medicine Spraying (Poison)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment (Low Poison)</span>
+          </p>
+          <p ng-if="selectedLang == 1">আমাদের ইঁদুর কন্ট্রোল টীম অত্যন্ত ভাল প্রশিক্ষিত এবং অভিজ্ঞ সশস্ত্র নিয়ন্ত্রণ প্রযুক্তিবিদদের নিয়ে গঠিত।
+            সর্বোত্তম মানের চিকিত্সা এবং ১০০% ক্লায়েন্ট সন্তুষ্টি নিশ্চিত করাই আমাদের লক্ষ্য। আমরা ক্লায়েন্ট সন্তুষ্টি এবং মানের আপস
+            করি না। আমাদের পদ্ধতিগুলি আন্তর্জাতিক এবং আধুনিক। এই পদ্ধতিগুলি নিম্নে অন্তর্ভুক্ত:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Rodent Glue Trap (100% Poison Free)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Zinc Phosphide Treatment (Poison)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Rodent Metal Trap (100% Poison Free)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Medicine Spraying (Poison)<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment (Low Poison)</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div id="questions" class="service-offer">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  TAKE OUR SERVICE? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

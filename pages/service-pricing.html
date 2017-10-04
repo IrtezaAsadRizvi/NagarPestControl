@@ -1,0 +1,94 @@
+<div ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <div id="service-hero">
+    <h1 ng-if="selectedLang == 0" class="animated zoomIn">SERVICES PRICING</h1>
+    <h1 ng-if="selectedLang == 1" class="animated zoomIn">সেবার মূল্য</h1>
+  </div>
+  <div id="service-content">
+    <center>
+      <h1 ng-if="selectedLang == 0" >Pest Control Services Tariff</h1>
+      <h1 ng-if="selectedLang == 1" >কীটপতঙ্গ নিয়ন্ত্রণ সেবা ট্যারিফ</h1>
+      <div id="title-line"></div>
+    </center>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4" id="service-page-service">
+          <div class="service-pic animated bounce">
+            <img src="images/service-icon.png" alt="">
+          </div>
+          <h3 ng-if="selectedLang == 0">FLAT 1500 SFT</h3>
+          <h3 ng-if="selectedLang == 1">ফ্ল্যাট ১৫০০ SFT</h3>
+          <p ng-if="selectedLang == 0">Treatment for Cockroach, Spider, Lizard, Bed Bugs and Ants, 4 Months Guarantee</p>
+          <p ng-if="selectedLang == 1">তেলাপোকা, মাকড়সা, টিকটিকি, ছারপোকা এবং পিঁপড়া দমন, ৪ মাস নিশ্চয়তা</p>
+          <h4 ng-if="selectedLang == 0">Service Tariff BDT 3000/=</h4>
+          <h4 ng-if="selectedLang == 1">সেবার মূল্য BDT ৩০০০/=</h4>
+        </div>
+        <div class="col-md-4" id="service-page-service">
+          <div class="service-pic animated bounce">
+            <img src="images/service-icon.png" alt="">
+          </div>
+          <h3 ng-if="selectedLang == 0">FLAT 2500 SFT</h3>
+          <h3 ng-if="selectedLang == 1">ফ্ল্যাট ২৫০০ SFT</h3>
+          <p ng-if="selectedLang == 0">Treatment for Cockroach, Spider, Lizard, Bed Bugs and Ants, 4 Months Guarantee</p>
+          <p ng-if="selectedLang == 1">তেলাপোকা, মাকড়সা, টিকটিকি, ছারপোকা এবং পিঁপড়া দমন, ৪ মাস নিশ্চয়তা</p>
+          <h4 ng-if="selectedLang == 0">Service Tariff BDT 4000/=</h4>
+          <h4 ng-if="selectedLang == 1">সেবার মূল্য BDT ৪০০০/=</h4>
+        </div>
+        <div class="col-md-4" id="service-page-service">
+          <div class="service-pic animated bounce">
+            <img src="images/service-icon.png" alt="">
+          </div>
+          <h3 ng-if="selectedLang == 0">FLAT 3500 SFT</h3>
+          <h3 ng-if="selectedLang == 1">ফ্ল্যাট ৩৫০০ SFT</h3>
+          <p ng-if="selectedLang == 0">Treatment for Cockroach, Spider, Lizard, Bed Bugs and Ants, 4 Months Guarantee</p>
+          <p ng-if="selectedLang == 1">তেলাপোকা, মাকড়সা, টিকটিকি, ছারপোকা এবং পিঁপড়া দমন, ৪ মাস নিশ্চয়তা</p>
+          <h4 ng-if="selectedLang == 0">Service Tariff BDT 6000/=</h4>
+          <h4 ng-if="selectedLang == 1">সেবার মূল্য BDT ৬০০০/=</h4>
+        </div>
+        <div class="col-md-4" id="service-page-service">
+          <div class="service-pic animated bounce">
+            <img src="images/service-icon.png" alt="">
+          </div>
+          <h3 ng-if="selectedLang == 0">HOUSEHOLD TERMITE CONTROL</h3>
+          <h3 ng-if="selectedLang == 1">বাসাবাড়িতে উইপোকা দমন</h3>
+          <p ng-if="selectedLang == 0">Treatment for Termite, 5 years Guarantee</p>
+          <p ng-if="selectedLang == 1">উইপোকা দমন, ৫ বছর নিশ্চয়তা</p>
+          <h4 ng-if="selectedLang == 0">Service Tariff BDT 5000/=</h4>
+          <h4 ng-if="selectedLang == 1">সেবার মূল্য BDT ৫০০০/=</h4>
+        </div>
+        <div class="col-md-4" id="service-page-service">
+          <div class="service-pic animated bounce">
+            <img src="images/service-icon.png" alt="">
+          </div>
+          <h3 ng-if="selectedLang == 0">PRE-CONSTRUCTION TERMITE CONTROL</h3>
+          <h3 ng-if="selectedLang == 1">নির্মাণের আগে উইপোকা দমন</h3>
+          <p ng-if="selectedLang == 0">Treatment before the construction of building structure, 20 years Guarantee</p>
+          <p ng-if="selectedLang == 1">বিল্ডিং নির্মাণ আগে দমন, ২০ বছর নিশ্চয়তা</p>
+          <h4 ng-if="selectedLang == 0">Service Tariff BDT 9000/=</h4>
+          <h4 ng-if="selectedLang == 1">সেবার মূল্য BDT ৯০০০/=</h4>
+        </div>
+        <div class="col-md-4" id="service-page-service">
+          <div class="service-pic animated bounce">
+            <img src="images/service-icon.png" alt="">
+          </div>
+          <h3 ng-if="selectedLang == 0">HOUSE HOLD FUMIGATION</h3>
+          <h3 ng-if="selectedLang == 1">বাসাবাড়িতে উপধূপন</h3>
+          <p ng-if="selectedLang == 0">Effective for Cockroach, Spider, Lizard, Bed Bugs, Termite and Ants, 4 Months Guarantee</p>
+          <p ng-if="selectedLang == 1">তেলাপোকা, মাকড়সা, টিকটিকি, ছারপোকা এবং পিঁপড়ার জন্য কার্যকর, ৪ মাস নিশ্চয়তা</p>
+          <h4 ng-if="selectedLang == 0">Service Tariff BDT 4000/=</h4>
+          <h4 ng-if="selectedLang == 1">সেবার মূল্য BDT ৪০০০/=</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="questions" class="service-offer" style="margin-top:60px">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  ORDER A SERVICE <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  অর্ডার করুন <span>01682222222,01682222222</span></p>
+  </div>
+</div>

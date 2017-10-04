@@ -1,0 +1,71 @@
+<div id="about-us">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <center>
+      <h1 class="animated bounceIn" ng-if="selectedLang == 0" >ABOUT US</h1>
+      <h1 class="animated bounceIn" ng-if="selectedLang == 1" >আমাদের সম্পর্কে</h1>
+      <div id="title-line"></div>
+      <p id="about-text"  ng-if="selectedLang == 0">"Quality of the job depends less on the sales person than
+        on the individual who does the work." We are operating under the leadership
+        of Mr. Saiful Islam Rana. He is one of the technically qualified operators
+        of the pest control industry having over 25 years of rich experience in
+        various aspects of pest management. He regularly participates in workshops
+        & conferences to bring in updated Technologies & knowledge. Our management
+        & staff SMPCS is a licensed pest management company & also is member of the
+        Bangladesh Pest Management Association (BPCA). We are a customer friendly
+        company which provides quick, efficient, high quality & tailor made services
+        to residential & commercial customers efficient management has been one of
+        our prime intentions. Our client friendly staff is well equipped to handle
+        all our customers and duly satisfy their needs. We have also managed to
+        computerize our administrative system </p>
+      <p id="about-text"  ng-if="selectedLang == 1">
+        "কাজটি যে ব্যক্তির উপর নির্ভর করে সেই ব্যক্তির তুলনায় চাকরির গুণমান বিক্রয় ব্যক্তির উপর কম
+        নির্ভর করে।" আমরা মিঃ সাইফুল ইসলাম রানা এর নেতৃত্বে কাজ করছি। কীটপতঙ্গ ব্যবস্থাপনার বিভিন্ন
+         দিকের ২5 বছরের সমৃদ্ধ অভিজ্ঞতা থেকে তিনি কীটপতঙ্গ নিয়ন্ত্রণ শিল্পের টেকনিক্যালি যোগ্য
+         অপারেটরদের একজন। তিনি নিয়মিত আপডেট প্রযুক্তি এবং জ্ঞান আনা কর্মশালা এবং সম্মেলন
+         অংশগ্রহণ। আমাদের ব্যবস্থাপনা ও কর্মী এসএমপিসিএস একটি লাইসেন্সপ্রাপ্ত কীটপতঙ্গ ব্যবস্থাপনা
+         প্রতিষ্ঠান এবং বাংলাদেশ কীটপতঙ্গ ব্যবস্থাপনা সংস্থা (বি.পি.সি.এ.) এর সদস্য। আমরা একটি গ্রাহক
+         বন্ধুত্বপূর্ণ কোম্পানি যা দ্রুত, দক্ষ, উচ্চ মানের এবং দাতব্য সেবা প্রদান করে আবাসিক এবং বাণিজ্যিক
+         গ্রাহকদের দক্ষ ব্যবস্থাপনা আমাদের প্রধান উদ্দেশ্যগুলির একটি। আমাদের ক্লায়েন্ট বন্ধুত্বপূর্ণ স্টাফ ভাল
+         আমাদের সব গ্রাহকদের এবং যথোপযুক্তভাবে তাদের প্রয়োজন সন্তুষ্ট সজ্জিত করা হয়। আমরা আমাদের
+          প্রশাসনিক ব্যবস্থা কম্পিউটারাইজড করতে পেরেছি</p>
+
+      <h1 class="animated bounceIn" ng-if="selectedLang == 0" style="margin-top:100px;">OUR TEAM</h1>
+      <h1 class="animated bounceIn" ng-if="selectedLang == 1" style="margin-top:100px;">আমাদের টিম</h1>
+      <div id="title-line"></div>
+      <p id="about-text">There are many variations of passages of Lorem Ipsum available but the majority alteration that is injected humour words all the Lorem Ipsum generators on the Internet.</p>
+      <div class="row" style="max-width: 600px;">
+        <div class="col-md-6 col-sm-6">
+          <div id="about-members">
+            <div class="person-img-holder">
+              <img src="images/pestdude.jpg" alt="">
+            </div>
+            <h4>JOHN DOE</h4>
+            <span>Founder</span><br>
+            <h5>01682222222</h5>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-6">
+          <div id="about-members">
+            <div class="person-img-holder">
+              <img src="images/pestdude.jpg" alt="">
+            </div>
+            <h4>JOHN DOE</h4>
+            <span>Founder</span><br>
+            <h5>01682222222</h5>
+          </div>
+        </div>
+      </div>
+    </center>
+  </div>
+  <div id="questions" class="service-offer" style="margin-top:60px">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  WANT TO BE OUR CLIENT? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  আমাদের গ্রাহক হতে চান? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

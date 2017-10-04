@@ -1,0 +1,65 @@
+<div id="contact" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <center>
+    <h1 class="animated bounceIn" ng-if="selectedLang == 0" >CONTACT US</h1>
+    <h1 class="animated bounceIn" ng-if="selectedLang == 1" >যোগাযোগ করুন</h1>
+    <div id="title-line"></div>
+  </center>
+  <!-- CONTACT FORM -->
+  <div class="container">
+    <div class="wrapper" style="max-width:550px; margin:20px auto">
+        <form name="contactForm" ng-submit="submitForm()">
+            <!-- NAME -->
+            <div class="form-group" ng-class="{'has-success': contactForm.name.$valid}">
+                <label ng-if="selectedLang == 0" ><i class="fa fa-user" aria-hidden="true"></i>  name:</label>
+                <label ng-if="selectedLang == 1" ><i class="fa fa-user" aria-hidden="true"></i>  নাম:</label>
+                <input type="text" name="name" class="form-control" ng-model="customer.name" ng-minlength="2" ng-maxlength="100" placeholder="Type in your Name" required>
+                <p class="error" ng-if="contactForm.name.$error.required && contactForm.name.$touched"><i class="fa fa-times-circle"></i> please input your name</p>
+                <p class="error" ng-if="(contactForm.name.$error.minlength || contactForm.name.$error.maxlength) && contactForm.name.$touched"><i class="fa fa-times-circle"></i> name length should be 2~100</p>
+                <span class="glyphicon glyphicon-ok input-result" aria-hidden="true" ng-if="contactForm.name.$valid"></span>
+            </div>
+            <!-- PHONE -->
+            <div class="form-group" ng-class="{'has-success': contactForm.phone.$valid}">
+                <label ng-if="selectedLang == 0" ><i class="fa fa-phone" aria-hidden="true"></i>  phone:</label>
+                <label ng-if="selectedLang == 1" ><i class="fa fa-phone" aria-hidden="true"></i>  ফোন:</label>
+                <input type="number" name="phone" class="form-control" ng-model="customer.phone" ng-minlength="7" ng-maxlength="14" placeholder="Type in your Phone number" required>
+                <p class="error" ng-if="contactForm.phone.$error.required && contactForm.phone.$touched"><i class="fa fa-times-circle"></i> please input your phone number</p>
+                <p class="error" ng-if="(contactForm.phone.$error.minlength || contactForm.phone.$error.maxlength) && contactForm.phone.$touched"><i class="fa fa-times-circle"></i> Phone number is not valid</p>
+                <span class="glyphicon glyphicon-ok input-result" aria-hidden="true" ng-if="contactForm.phone.$valid"></span>
+            </div>
+            <!-- EMAIL -->
+            <div class="form-group" ng-class="{'has-success': contactForm.email.$valid}">
+                <label ng-if="selectedLang == 0" ><i class="fa fa-envelope" aria-hidden="true"></i>  email:</label>
+                <label ng-if="selectedLang == 1" ><i class="fa fa-envelope" aria-hidden="true"></i>  ই-মেইল:</label>
+                <input type="email" name="email" class="form-control" ng-model="customer.email" ng-minlength="7" ng-maxlength="200" placeholder="Type in your Email" required>
+                <p class="error" ng-if="contactForm.email.$error.required && contactForm.email.$touched"><i class="fa fa-times-circle"></i> please input your email</p>
+                <p class="error" ng-if="(contactForm.email.$error.minlength || contactForm.email.$error.maxlength) && contactForm.email.$touched"> <i class="fa fa-times-circle"></i> Email is not valid</p>
+                <span class="glyphicon glyphicon-ok input-result" aria-hidden="true" ng-if="contactForm.email.$valid"></span>
+            </div>
+            <!-- MSG -->
+            <div class="form-group" ng-class="{'has-success': contactForm.msg.$valid}">
+                <label ng-if="selectedLang == 0" ><i class="fa fa-comment" aria-hidden="true"></i>  Your Message:</label>
+                <label ng-if="selectedLang == 1" ><i class="fa fa-comment" aria-hidden="true"></i>  আপনার মেসেজ:</label>
+                <textarea type="text" name="msg" class="form-control" ng-model="customer.msg" ng-minlength="2" ng-maxlength="400" rows="8" cols="80" style="resize:none" placeholder="Type in your message" required></textarea>
+                <p class="error" ng-if="contactForm.msg.$error.required && contactForm.msg.$touched"><i class="fa fa-times-circle"></i> please input your msg</p>
+                <p class="error" ng-if="(contactForm.msg.$error.minlength || contactForm.msg.$error.maxlength) && contactForm.mmsg.$touched"><i class="fa fa-times-circle"></i> Message length should be 2~400</p>
+                <span class="glyphicon glyphicon-ok input-result" aria-hidden="true" ng-if="contactForm.msg.$valid"></span>
+            </div>
+
+            <div class="form-group">
+                <button class="btn btn-danger" id="form-btn" type="submit" ng-disabled="contactForm.$invalid"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+            </div>
+        </form>
+    </div>
+  </div>
+  <div id="questions" class="service-offer" style="margin-top:60px">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  WANT TO BE OUR CLIENT? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  আমাদের গ্রাহক হতে চান? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

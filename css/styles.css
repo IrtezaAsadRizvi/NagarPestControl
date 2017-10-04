@@ -1,0 +1,616 @@
+/************************************************
+Site name: Nagar Pest Control
+Author: Irteza Asad
+Email: irteza.asad.cse@ulab.edu.bd
+Version: 1.0
+************************************************ */
+
+/* FONTS */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,400i,500,600,700,800,900');
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+/* DEFAULT */
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #F7F7F7;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,h2,h3,h4,h5{
+  font-weight: 400;
+}
+#title-line{
+  width: 50px;
+  height: 7px;
+  margin: 30px;
+  background-image: url('../images/title-line.png');
+}
+#title-line-w{
+  width: 50px;
+  height: 7px;
+  margin: 30px;
+  background-image: url('../images/title-line-w.png');
+}
+.small-p{
+  font-size: 0.8em;
+}
+#small-rows{
+  margin-bottom:  20px;
+}
+.read-more-link{
+  color: #E23310;
+  cursor: pointer;
+}
+.read-more-link:hover{
+  color: #E23310;
+}
+
+/* ROUTE LOADER */
+.spinner{
+    width: 80px;
+    height: 80px;
+
+    border: 2px solid #111214;
+    border-top:3px solid #F7F7F7;
+    border-radius: 100%;
+
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+
+    animation: spin 1s  ease-in-out infinite;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#overlay{
+  height:100%;
+  width:100%;
+  background: #111214;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index: 1000;
+ }
+
+
+/************************************************
+ HEADER SECTION
+************************************************ */
+
+/* HEADER INFO */
+#header-info{
+  width: 100%;
+  background-color: #111214;
+  padding-top: 10px;
+}
+#header-info-item li {
+  float: left;
+  list-style: none;
+  margin: 5px 30px;
+  font-weight: 300;
+  font-size: 1.6em;
+  color: #F7F7F7;
+}
+#header-info-item li i{
+  padding: 10px 15px;
+  border: 1px solid #f7f7f7;
+}
+#lang-btn-container{
+  margin: 0 auto;
+  text-align: center;
+  color: #F7F7F7;
+}
+.lang-btn{
+  display: inline-block;
+  margin: 5px 5px;
+  padding: 7px 0px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.lang-btn:hover,.lang-btn:focus{
+  border-bottom: 2px solid #F7F7F7;
+}
+
+/* NAVIGATION BAR */
+#tf-menu {
+	margin-bottom: 0;
+	background: #F7F7F7;
+	border: 0;
+	color: #fff !important;
+	padding: 20px 0;
+	transition: all 0.5s;
+  border-radius: 0px;
+}
+#tf-menu.stick {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    background: #222222;
+    padding: 1% 0;
+}
+#tf-menu.navbar-default .navbar-nav > li > a {
+	color: #C3C3C3;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: 1px;
+  cursor: pointer;
+}
+
+#tf-menu.navbar-default .navbar-nav > li > a:hover,
+#tf-menu.navbar-default .navbar-nav > li > a:focus {
+	color: #E23310;
+	background-color: transparent;
+}
+a.navbar-brand.logo,a.navbar-brand.logo:hover{
+  color: #E23310;
+  font-size: 1.5em;
+}
+ul.nav li.dropdown{
+  padding: 0;
+}
+ul.nav li.dropdown ul li a{
+  color: #C3C3C3;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 1px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/************************************************
+ HOME
+************************************************ */
+
+/* HERO SECTION */
+#hero{
+  height: auto;
+  width: 100%;
+  background-image: url('../images/slide1.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  padding-bottom: 20px;
+}
+#hero-content{
+  width: 100%;
+  text-align: center;
+  color: #f7f7f7;
+  margin-top: 100px;
+}
+#hero-text{
+  font-weight: 500;
+  font-size: 4em;
+}
+#hero-text span{
+  color: #E23310;
+}
+.btn-general{
+  width: 200px;
+  height: 50px;
+  border: none;
+  color: #111214;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: #f7f7f7;
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+  margin-bottom: 40px;
+}
+.btn-general:before{
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background-color: #E23310;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.btn-general:hover{
+  color: #f7f7f7;
+  border: 1px solid #E23310;
+}
+.btn-general:hover:before{
+  left: 0;
+}
+
+/* SERVICES INFO */
+#home-services-section{
+  padding: 80px 40px;
+}
+#home-info{
+  margin: 50px 40px;
+  max-width: 950px;
+  text-align: left;
+}
+#home-info p{
+  font-size: 1.2em;
+  text-align: left;
+  margin-top: 20px;
+}
+#home-info h1{
+  margin-bottom: 30px;
+}
+#home-services-info{
+  margin-top: 30px;
+  padding: 30px;
+}
+.img-holder{
+  height: 120px;
+  width: 180px;
+  overflow: hidden;
+}
+.img-holder img{
+  height: 100%;
+  width: auto;
+}
+
+/* why call */
+#why-call{
+  width: 100%;
+  height: auto;
+  background-color:  #E23310;
+  color: #f7f7f7;
+  padding: 50px 0px;
+}
+#why-call p{
+  padding: 10px 50px;
+  font-size: 1.3em;
+  margin-bottom: 120px;
+}
+.why-call-insects{
+  float: left;
+  width: 20%;
+  height: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.why-call-insects img{
+  height: 150px;
+  width: 150px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+/* our services */
+#home-our-services{
+  padding: 50px 0px;
+}
+#home-our-services-img{
+
+}
+#our-servies{
+  width: 100%;
+}
+.service-pic{
+  height: 100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.service-pic img{
+  height: 100px;
+  width: 100px;
+}
+/* clients */
+#home-clients{
+  padding-bottom: 120px;
+}
+.clients{
+  height: 100px;
+  text-align: center;
+  border-radius: none;
+  margin-bottom: 30px;
+}
+.clients img{
+  width: auto;
+  height: 100%;
+  border-radius: none;
+}
+/* any questions */
+#questions{
+  width: 100%;
+  background-color:  #E23310;
+  padding: 60px 20px 50px 20px;
+  text-align: center;
+}
+#questions p{
+  color: #111214;
+  font-size: 1.5em;
+  font-weight: 400;
+  text-align: center;
+}
+#questions p span{
+  font-weight: 600;
+  color: #f7f7f7;
+}
+
+/************************************************
+ SINGLE SERVICE PAGE
+************************************************ */
+#single-service-page{
+  padding: 80px 0px 0px 0px;
+}
+#single-service-page-intro{
+  padding: 40px 20px;
+  max-width: 950px;
+  text-align: left;
+  font-size: 1.2em;
+}
+#single-service-page-cockroach{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/cockroach-control.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#single-service-page-rodent{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/rodent-control.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#single-service-page-mosquito{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/mosquito-control.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#single-service-page-termite{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/termites-control.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#single-service-page-bed-bugs{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/bed-bug-control.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#single-service-page-ants{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/ant-control.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#single-service-page-fumigation{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/fumigation.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#can-spread{
+  text-align: left;
+  padding: 30px;
+  margin-top: 30px;
+}
+#our-method{
+  text-align: left;
+  padding: 30px;
+  margin-top: 30px;
+  border-left: 2px solid #E23310;
+}
+#our-method p{
+  padding: 30px 0px;
+}
+#our-method p span{
+  font-weight: 500;
+  color: #111214;
+}
+#our-method p span i{
+  color: #E23310;
+}
+#questions.service-offer{
+  margin-top: 30px;
+  text-align: center;
+  margin-bottom: none;
+}
+#fumigation-service{
+  padding: 50px 20px;
+}
+#fumigation-service i{
+  font-size: 7em;
+}
+
+/************************************************
+ SERVICE PAGE
+************************************************ */
+
+#service-hero{
+  height: 250px;
+  width: 100%;
+  background-image: url('../images/slide2.jpg');
+  background-color: #111214;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: none;
+  margin-bottom: 80px;
+}
+#service-hero h1{
+  width: 100%;
+  text-align: center;
+  color: #f7f7f7;
+  padding-top: 105px;
+  font-weight: 500;
+  margin-top: 0px;
+}
+#service-page-service{
+  text-align: center;
+  padding: 40px;
+}
+#service-page-service h3{
+  margin: 20px auto;
+}
+#service-page-service p{
+  margin-bottom: 40px;
+}
+#service-page-service h4{
+  color: #E23310;
+}
+
+/************************************************
+ OUR CLIENTS
+************************************************ */
+
+#our-clients{
+  padding: 80px 0px 0px 0px;
+}
+
+/************************************************
+ ABOUT PAGE
+************************************************ */
+#about-us{
+  margin-top: 100px;
+}
+#about-text{
+  text-align: left;
+  font-size: 1.2em;
+  margin: 50px auto;
+}
+#about-members{
+  margin: 50px auto;
+  padding-bottom: 20px;
+}
+/*#about-members span{
+  color: #888;
+}
+#about-members h5{
+  color:  #E23310;
+}*/
+#about-members:hover{
+  background-color: #E23310;
+  max-width: 250px;
+  color: #F7F7F7;
+}
+.person-img-holder{
+  height: 320px;
+  width: 250px;
+  overflow: hidden;
+}
+.person-img-holder img{
+  width: 100%;
+}
+
+/************************************************
+ CONTACT
+************************************************ */
+#contact{
+  margin-top: 100px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+#form-btn.btn{
+  max-width: 750px;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10px;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0px;
+  font-weight: 500;
+  color: #F7F7F7;
+  font-size: 1.5em;
+  border-radius: 3px;
+}
+.error{
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+  color:  #F7F7F7;
+  background-color: #E23310;
+}
+.form-group label{
+  color: #111214;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/************************************************
+ ADMIN PANEL
+************************************************ */
+#admin{
+  padding: 80px;
+}
+#admin h1{
+  color: #E23310;
+  margin-bottom: 80px;
+}
+
+/************************************************
+ FOOTER SECTION
+************************************************ */
+
+#footer{
+  width: 100%;
+  height: auto;
+  background-color: #111214;
+  padding: 80px 0px;
+  overflow: hidden;
+  color: #C3C3C3;
+}
+#footer h1,#footer h2,#footer h4{
+  color: #f7f7f7;
+}

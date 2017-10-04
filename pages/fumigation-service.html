@@ -1,0 +1,51 @@
+<div id="single-service-page" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <center>
+    <div class="service-pic animated bounceIn" style="width:100px; margin: 0 auto;">
+      <img src="images/fumigation.png" alt="">
+    </div>
+    <h2 ng-if="selectedLang == 0" class="animated bounceInUp">Fumigation Services</h2>
+    <h2 ng-if="selectedLang == 1" class="animated bounceInUp">উপধূপন</h2>
+    <div id="title-line" class="animated bounceInUp"></div>
+    <div class="container animated bounceInUp" id="single-service-page-intro">
+      <p ng-if="selectedLang == 0">Fumigation is the ultimate answer to all pest problems. We provide Household Fumigation, Industrial Fumigation and Container Fumigation services</p>
+      <p ng-if="selectedLang == 1">উপধূপন হোলো সব কীটপতঙ্গ সমস্যার চূড়ান্ত উত্তর। আমরা বাসাবাড়িতে উপধূপন,এলাকাভিত্তিক উপধূপন এবং বদ্ধ জায়গায় উপধূপন সেবা দিয়ে থাকি।</p>
+    </div>
+    <div id="single-service-page-fumigation"></div>
+    <div class="container" id="single-service-page-details">
+      <div class="row">
+        <div class="col-md-4" id="fumigation-service">
+          <i class="fa fa-home" aria-hidden="true"></i>
+          <h4 ng-if="selectedLang == 0">HOUSEHOLD FUMIGATION</h4>
+          <h4 ng-if="selectedLang == 1">বাসাবাড়িতে উপধূপন</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px">This service focuses on households, flats or a whole building that has been infested.<br><br>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px">এ পরিষেবাটি পরিবার, ফ্ল্যাট বা একটি সম্পূর্ণ বিল্ডিং এর জন্য যার উপর পেস্ট নিপীড়িত হয়েছে।<br><br>
+        </div>
+        <div class="col-md-4" id="fumigation-service">
+          <i class="fa fa-road" aria-hidden="true"></i>
+          <h4 ng-if="selectedLang == 0">INDUSTRIAL FUMIGATION</h4>
+          <h4 ng-if="selectedLang == 1">এলাকাভিত্তিক উপধূপন</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px">Our Industrial Fumigation Service is for infested areas, streets and public spaces. <br><br>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px">আমাদের এলাকাভিত্তিক উপধূপন পরিষেবা আক্রান্ত এলাকায়, রাস্তায় এবং জনসাধারণের চলাচলের স্থানগুলোর জন্য।<br><br>
+        </div>
+        <div class="col-md-4" id="fumigation-service">
+          <i class="fa fa-archive" aria-hidden="true"></i>
+          <h4 ng-if="selectedLang == 0">CONTAINER FUMIGATION</h4>
+          <h4 ng-if="selectedLang == 1">বদ্ধ জায়গায় উপধূপন</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px">We also treat contained spaces like a closed space of a house.<br><br>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px">আমরা বন্ধ জায়গাতেও পেস্ট দমন করে থাকি্য।<br><br>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div id="questions" class="service-offer">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  TAKE OUR SERVICE? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

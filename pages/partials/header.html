@@ -1,0 +1,84 @@
+<header ng-controller="npcCtrl">
+  <!-- HEADER INFO SEC -->
+  <div id="header-info" class="container">
+    <div class="row">
+      <ul class="col-md-9 col-sm-12" id="header-info-item">
+        <li> <i class="fa fa-phone" aria-hidden="true"></i> 01682222222 </li>
+        <li> <i class="fa fa-phone" aria-hidden="true"></i> 01682222222 </li>
+        <li> <i class="fa fa-envelope-o" aria-hidden="true"></i> info@npc.com </li>
+      </ul>
+      <div class="col-md-3 col-sm-12" id="lang-btn-container">
+        <div class="lang-btn" ng-click="langSelect(0)">English</div>
+        <div class="lang-btn" ng-click="langSelect(1)">বাংলা</div>
+      </div>
+    </div>
+  </div>
+  <!-- NAVIGATION BAR -->
+  <nav id="tf-menu" class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand logo" href="#"><span style="font-weight:200">MY</span><span style="font-weight:700">LOGO</span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#" ng-if="selectedLang == 0">Home</a>
+              <a href="#" ng-if="selectedLang == 1">হোম</a>
+            </li>
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" ng-if="selectedLang == 0" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+              <ul class="dropdown-menu" ng-if="selectedLang == 0">
+                <li><a ng-click="link('cockroach-control')">Cockroach Control</a></li>
+                <li><a ng-click="link('mosquito-control')">Mosquito Control</a></li>
+                <li><a ng-click="link('termite-control')">Termite Control</a></li>
+                <li><a ng-click="link('bed-bugs-control')">Bed bugs Control</a></li>
+                <li><a ng-click="link('rodent-control')">Rodent Control</a></li>
+                <li><a ng-click="link('ant-control')">Ants Control</a></li>
+                <li><a ng-click="link('fumigation-service')">Fumigation Service</a></li>
+              </ul>
+              <a href="" class="dropdown-toggle" data-toggle="dropdown" ng-if="selectedLang == 1" role="button" aria-haspopup="true" aria-expanded="false">আমাদের সেবা <span class="caret"></span></a>
+              <ul class="dropdown-menu" ng-if="selectedLang == 1">
+                <li><a ng-click="link('cockroach-control')">তেলাপোকা দমন</a></li>
+                <li><a ng-click="link('mosquito-control')">মশা দমন</a></li>
+                <li><a ng-click="link('termite-control')">উই পোকা দমন</a></li>
+                <li><a ng-click="link('bed-bugs-control')">ছারপোকা দমন</a></li>
+                <li><a ng-click="link('rodent-control')">ইঁদুর দমন</a></li>
+                <li><a ng-click="link('ant-control')">পিঁপড়া দমন</a></li>
+                <li><a ng-click="link('fumigation-service')">উপধূপন</a></li>
+              </ul>
+            </li>
+            <li>
+              <a ng-click="link('service-pricing')" ng-if="selectedLang == 0">Service Pricing</a>
+              <a ng-click="link('service-pricing')" ng-if="selectedLang == 1">সেবার মূল্য</a>
+            </li>
+            <li>
+              <a ng-click="link('our-clients')" ng-if="selectedLang == 0">Our Clients</a>
+              <a ng-click="link('our-clients')" ng-if="selectedLang == 1">আমাদের গ্রাহক</a>
+            </li>
+            <!-- <li>
+              <a ng-click="link('blog')" ng-if="selectedLang == 0">Blog</a>
+              <a ng-click="link('blog')" ng-if="selectedLang == 1">ব্লগ</a>
+            </li> -->
+            <li>
+              <a ng-click="link('about-us')" ng-if="selectedLang == 0">About Us</a>
+              <a ng-click="link('about-us')" ng-if="selectedLang == 1">আমাদের সম্পর্কে</a>
+            </li>
+            <li>
+              <a ng-click="link('contact')" ng-if="selectedLang == 0">Contact</a>
+              <a ng-click="link('contact')" ng-if="selectedLang == 1">যোগাযোগ</a>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+</header>

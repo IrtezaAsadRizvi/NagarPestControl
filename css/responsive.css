@@ -1,0 +1,67 @@
+@media only screen and (max-width: 800px) {
+    .why-call-insects{
+      width: 33.33%;
+      margin-bottom: 20px;
+    }
+    #home-our-services-img{
+      display: none;
+    }
+    #hero{
+      height: auto;
+    }
+    #home-our-services{
+      margin: 20px;
+      text-align: center;
+    }
+    #home-our-services #title-line{
+      margin: 30px auto;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    #hero-text span{
+      font-size: 0.9em;
+    }
+    .why-call-insects{
+      width: 50%;
+      margin-bottom: 20px;
+    }
+    #home-our-services-img{
+      display: none;
+    }
+    #hero{
+      height: auto;
+    }
+    #home-our-services{
+      margin: 20px;
+      text-align: center;
+    }
+    #home-our-services #title-line{
+      margin: 30px auto;
+    }
+}
+
+
+@media only screen and (max-width: 320px) {
+    #hero-text span{
+      font-size: 0.6em;
+    }
+    .why-call-insects{
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    #home-our-services-img{
+      display: none;
+    }
+    #hero{
+      height: auto;
+    }
+    #home-our-services{
+      margin: 20px;
+      text-align: center;
+    }
+    #home-our-services #title-line{
+      margin: 30px auto;
+    }
+}

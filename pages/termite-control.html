@@ -1,0 +1,61 @@
+<div id="single-service-page" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <center>
+    <div class="service-pic animated bounceIn" style="width:100px; margin: 0 auto;">
+      <img src="images/termites.png" alt="">
+    </div>
+    <h2 ng-if="selectedLang == 0" class="animated bounceInUp">Termite Control Services</h2>
+    <h2 ng-if="selectedLang == 1" class="animated bounceInUp">উই পোকা দমন</h2>
+    <div id="title-line" class="animated bounceInUp"></div>
+    <div class="container animated bounceInUp" id="single-service-page-intro">
+      <p ng-if="selectedLang == 0">Termites are one of the most dangerous species of insects alive.
+        They can demolish a whole jungle within months! No wooden surface is safe from their wrath.
+        Termites are not directly dangerous to humans, or carriers of disease. But termites can easily
+        destroy your valuable wooden furniture, doors, windows, door frames, books, valuable documents,
+        Clothes, and other valuable possessions. </p>
+      <p ng-if="selectedLang == 1">উই পোকা সমস্ত পোকামাকড়ের মধ্যে সবচেয়ে বিপজ্জনক প্রজাতির একটি।
+        কয়েক মাসের মধ্যে তারা পুরো জঙ্গল শেষ করে ফেলতে পারে! কোনও কাঠই তাদের ক্রোধ থেকে নিরাপদ নয়। উই
+        পোকা সরাসরি মানুষের জন্য বিপজ্জনক নয়, তবে এরা বিপজ্জনক রোগের বাহক। এরা সহজেই আপনার মূল্যবান কাঠের
+        আসবাবপত্র, দরজা, জানালা, দরজা ফ্রেম, বই, মূল্যবান নথি, বস্ত্র এবং অন্যান্য মূল্যবান সম্পদ ধ্বংস করতে পারে।</p>
+    </div>
+    <div id="single-service-page-termite"></div>
+    <div class="container" id="single-service-page-details">
+      <div class="row">
+        <div class="col-md-4" id="can-spread">
+          <h4 ng-if="selectedLang == 0">TERMITE CAN SPREAD</h4>
+          <h4 ng-if="selectedLang == 1">উই পোকা প্রেড করতে পারে</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> Allergic Reactions<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Asthma Attacks<br><br>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> এলার্জি<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> হাঁপানি<br><br>
+        </div>
+        <div class="col-md-8" id="our-method">
+          <h4 ng-if="selectedLang == 0">OUR METHODS</h4>
+          <h4 ng-if="selectedLang == 1">আমাদের পদ্ধতি</h4>
+          <p ng-if="selectedLang == 0">There are two major methods for termite control. You can use liquid termite insecticides (termiticides) for barrier or soil treatment or termite baits. Some people choose both options. But we in addition provide some special treatment:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Perimeter Digging Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Perimeter Drilling Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+          </p>
+          <p ng-if="selectedLang == 1">সরাসরি কন্ট্রোল করার জন্য দুটি প্রধান পদ্ধতি আছে। আপনি তরল কীটনাশক বা মাটি চিকিত্সা ব্যবহার করতে পারেন কিছু লোক উভয় অপশনই বেছে নেয়। তবে আমরা কিছু বিশেষ চিকিত্সা প্রদান করি:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Perimeter Digging Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Perimeter Drilling Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div id="questions" class="service-offer">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  TAKE OUR SERVICE? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? <span>01682222222,01682222222</span></p>
+  </div>
+</div>

@@ -1,0 +1,79 @@
+<div id="single-service-page" ng-controller="npcCtrl">
+  <!-- LOADER ANIMATION -->
+  <div ng-show='stateIsLoading'>
+    <div id="overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+  
+  <center>
+    <div class="service-pic animated bounceIn" style="width:100px; margin: 0 auto;">
+      <img src="images/cockroach-512.png" alt="">
+    </div>
+    <h2 ng-if="selectedLang == 0" class="animated bounceInUp">Cockroach Control Services</h2>
+    <h2 ng-if="selectedLang == 1" class="animated bounceInUp">তেলাপোকা দমন</h2>
+    <div id="title-line" class="animated bounceInUp"></div>
+    <div class="container animated bounceInUp" id="single-service-page-intro">
+      <p ng-if="selectedLang == 0">We often receive phone calls from panicked homeowners
+        who are seeing cockroaches in their homes. Not only are cockroaches unattractive
+        but they are also a health concern. Cockroaches are known to carry diseases and
+        can cause allergic reactions. Knowing how and why roaches are getting into your
+        home is important for the health of you and your family.</p>
+      <p ng-if="selectedLang == 1">আমরা প্রায়ই ঘন ঘন গৃহকর্তাদের ফোন কলগুলি গ্রহণ করি যারা
+        তাদের বাড়িতে তেলাপোকা দেখছেন। এটি কেবলমাত্র অনাচারী নয় কিন্তু একটি স্বাস্থ্যের উদ্বেগও।
+        তেলাপোকারা রোগ বহন করে এবং এলার্জি প্রতিক্রিয়া সৃষ্টি করতে পারে। আপনি এবং আপনার
+        পরিবারের স্বাস্থ্যের জন্য তেলাপোকা কিভাবে এবং কেন আপনার ঘরে ঢুকবে তা জানা গুরুত্বপূর্ণ।</p>
+    </div>
+    <div id="single-service-page-cockroach"></div>
+    <div class="container" id="single-service-page-details">
+      <div class="row">
+        <div class="col-md-4" id="can-spread">
+          <h4 ng-if="selectedLang == 0">COCKROACHES CAN SPREAD</h4>
+          <h4 ng-if="selectedLang == 1">তেলাপোকা প্রেড করতে পারে</h4>
+          <p ng-if="selectedLang == 0" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> Diarrhoea<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Dysentery<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Cholera<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Leprosy<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Plague<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Typhoid fever<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> Viral Diseases such as Poliomyelitis.</p>
+          <p ng-if="selectedLang == 1" style="font-weight: 500; margin-top:25px"><i class="fa fa-frown-o" aria-hidden="true"></i> পেট নামা<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> আমাশয়-রোগ<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> কলেরা<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> কুষ্ঠব্যাধি<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> প্লেগ<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> টাইফয়েড জ্বর<br><br>
+            <i class="fa fa-frown-o" aria-hidden="true"></i> শিশু-ব্যাধিবিশেষ</p>
+        </div>
+        <div class="col-md-8" id="our-method">
+          <h4 ng-if="selectedLang == 0">OUR METHODS</h4>
+          <h4 ng-if="selectedLang == 1">আমাদের পদ্ধতি</h4>
+          <p ng-if="selectedLang == 0">Cockroach control can be tricky because there are two main types of roaches
+            (American and German), and they are eliminated using different techniques.Our
+            entomologist team is always researching and finding new techniques and methods
+            for dealing with cockroach infestation. Our common cockroach pest control methods
+            are as follows:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Cockroach Killer Gel Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Cockroach Glue Trap Treatment</span>
+          </p>
+          <p ng-if="selectedLang == 1">তেলাপোকা দমন খুব কৌশলী হতে পারে কারণ দুটি প্রধান ধরনের তেলাপোকা আছে (আমেরিকান এবং জার্মান),
+            এবং তাদের কে বিভিন্ন কৌশল ব্যবহার করে নির্মূল করতে হয়। আমাদের দমন টিম সবসময় তেলাপোকা প্রতিবন্ধকতা মোকাবেলা করার জন্য নতুন
+             কৌশল এবং পদ্ধতি সন্ধান এবং খোঁজে। আমাদের সাধারণ তেলাপোকা নিয়ন্ত্রণ পদ্ধতি নিম্নরূপ:<br>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> General Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Customized Pesticides Spraying<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Cockroach Killer Gel Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Aluminum Phosphide Treatment<br></span>
+            <span><i class="fa fa-bug" aria-hidden="true" style="margin: 20px 5px 0px 5px"></i> Cockroach Glue Trap Treatment</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </center>
+  <div id="questions" class="service-offer">
+    <p ng-if="selectedLang == 0"><i class="fa fa-phone" aria-hidden="true"></i>  TAKE OUR SERVICE? <span>01682222222,01682222222</span></p>
+    <p ng-if="selectedLang == 1"><i class="fa fa-phone" aria-hidden="true"></i>  পেস্ট দমন নিয়ে কোনো প্রশ্ন? <span>01682222222,01682222222</span></p>
+  </div>
+</div>
